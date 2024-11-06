@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Geckos: A Verdadeira Ameaça à Raça Humana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #c0392b;
+            color: white;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a32c23;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery img {
+            flex: 1 1 calc(30% - 10px);
+            max-width: 150px;
+            margin: 5px;
+        }
+        .comments-section {
+            margin-top: 40px;
+        }
+        .comment {
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .comment p {
+            margin: 5px 0;
+        }
+        .likes {
+            color: #c0392b;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #c0392b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GECKOS: A Verdadeira Ameaça à Raça Humana</h1>
+</header>
+
+<div class="form-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Nome de Usuário" required>
+    <input type="password" id="password" placeholder="Senha" required>
+    <button onclick="login()">Entrar</button>
+    <p><a href="criar_conta.html">Criar uma conta</a></p>
+</div>
+
+<section>
+    <p>Nós da Geckos Informados adoramos os pequenos lagartos com carinha de bobos, sempre alegres. No entanto, esses animais são, na verdade, verdadeiros guerreiros sanguinários e ferozes, que nunca levam desaforos para casa.</p>
+    <img src="https://th.bing.com/th/id/OIP.tocryVyzw-8iKB9OImxS7QHaGJ?rs=1&pid=ImgDetMain" alt="Foto do Gecko">
+</section>
+
+<section>
+    <h2>Perigos dos Geckos</h2>
+    <p>Embora pareçam inofensivos, os geckos podem ser portadores de doenças (como por exemplo a DOENÇA DO GECKO, no qual o paciente sorri até a falência total dos órgãos) e causar danos em ambientes domésticos. Eles se tornam uma ameaça quando invadem lares e se reproduzem IMEDIATAMENTE.</p>
+    <ul>
+        <li>Danos a pessoas que não sorriem o "bastante"</li>
+        <li>Encaradas mortais</li>
+        <li>Insultos verbais graves</li>
+        <li>Dano a estruturas e eletrodomésticos devido ao seu tamanho extremo</li>
+        <li>Comportamento agressivo</li>
+        <li>Comportamento assassino dependendo do humor</li>
+    </ul>
+</section>
+
+<section>
+    <h1>SE VER ALGUMA DESSAS CRIATURAS, CHAME A POLÍCIA IMEDIATAMENTE, não corra, você não tem chance de escapar, caso ele te veja, e pretenda atacar, fique parado, eles não têm boa mira, mas não tente nada além de ficar parado, apenas reze.</h1>
+    <div class="gallery">
+        <img src="https://res.cloudinary.com/macm/image/upload/c_fit,h_500,w_500/q_auto/v1551845356/erbvghqc2l47ekjj12or.jpg" alt="Gecko 2">
+        <img src="https://th.bing.com/th/id/OIP.yqHz-XicJsbtO7YTaRiJ2wHaE7?rs=1&pid=ImgDetMain" alt="Gecko 3">
+        <img src="https://th.bing.com/th/id/R.b5dd58998fe8dd02950ee98f90d3c08f?rik=OYi7xOHofQCcwA&pid=ImgRaw&r=0" alt="Gecko 4">
+        <img src="https://th.bing.com/th/id/R.4d7ed923bc4c69f265c856cac200f6b3?rik=49Y8GvxLHTF1SQ&pid=ImgRaw&r=0" alt="Gecko 5">
+        <img src="https://th.bing.com/th/id/R.e8580390f2cc6e34b3c62bc190550cc7?rik=bongz98OeuTz%2fg&pid=ImgRaw&r=0" alt="Gecko 6">
+    </div>
+</section>
+
+<div class="form-container">
+    <h2>Comentários</h2>
+    <input type="text" id="comment" placeholder="Deixe seu comentário..." required>
+    <button onclick="addComment()">Enviar</button>
+</div>
+
+<div class="comments-section">
+    <h2>Comentários</h2>
+    <div id="commentsContainer"></div>
+</div>
+
+<footer>
+    <p>&copy; 2024 - Geckos Informados</p>
+    <p><a href="Geckoslindos.html">Você está aqui</a></p>
+    <p><a href="perigos_geckos.html">Saiba mais sobre os perigos dos geckos</a></p>
+    <p><a href="geckos_do_mal.html">Saiba mais sobre esse bicho do mal</a></p>
+    <p><a href="Como_se_defender.html">Saiba como proteger sua família dos geckos</a></p>
+    <p><a href="Ultima_medida_contra_eles.html">A última forma de escapar deles</a></p>
+    <p><a href="Oque_voce_precisa_saber.html">Você precisa saber disso</a></p>
+</footer>
+
+<script>
+    let currentUser = null;
+    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Simulando um usuário salvo no localStorage
+        const user = JSON.parse(localStorage.getItem('user')) || { username: 'usuario', password: 'senha' };
+
+        if (username === user.username && password === user.password) {
+            currentUser = username;
+            alert('Login bem-sucedido!');
+            loadComments();
+        } else {
+            alert('Usuário ou senha incorretos.');
+        }
+    }
+
+    function addComment() {
+        const commentInput = document.getElementById('comment');
+        const comment = commentInput.value;
+
+        if (currentUser && comment) {
+            comments.push({ name: currentUser, text: comment, likes: 0 });
+            localStorage.setItem('comments', JSON.stringify(comments));
+            commentInput.value = '';
+            loadComments();
+        } else {
+            alert('Por favor, faça login ou digite um comentário.');
+        }
+    }
+
+    function loadComments() {
+        const commentsContainer = document.getElementById('commentsContainer');
+        commentsContainer.innerHTML = '';
+
+        comments.forEach((c, index) => {
+            const commentDiv = document.createElement('div');
+            commentDiv.classList.add('comment');
+            commentDiv.innerHTML = `<strong>${c.name}</strong><p>${c.text}</p>
+                                    <span class="likes" onclick="likeComment(${index})">👍 ${c.likes}</span>`;
+            commentsContainer.appendChild(commentDiv);
+        });
+    }
+
+    function likeComment(index) {
+        comments[index].likes++;
+        localStorage.setItem('comments', JSON.stringify(comments));
+        loadComments();
+    }
+</script>
+
+</body>
+</html>

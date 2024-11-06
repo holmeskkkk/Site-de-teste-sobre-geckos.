@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Criar Conta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a32c23;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Criar Conta</h1>
+</header>
+
+<div class="form-container">
+    <h2>Registro de Usuário</h2>
+    <input type="text" id="newUsername" placeholder="Nome de Usuário" required>
+    <input type="password" id="newPassword" placeholder="Senha" required>
+    <button onclick="createAccount()">Criar Conta</button>
+    <p><a href="Geckoslindos.html">Já tem uma conta? Faça login aqui!</a></p>
+</div>
+
+<script>
+    function createAccount() {
+        const username = document.getElementById('newUsername').value;
+        const password = document.getElementById('newPassword').value;
+
+        // Simples validação
+        if (username && password) {
+            // Armazenar em localStorage (simulando um banco de dados)
+            localStorage.setItem('user', JSON.stringify({ username, password }));
+            alert('Conta criada com sucesso! Você pode fazer login agora.');
+            window.location.href = 'Geckoslindos.html'; // Redireciona para a página de login
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    }
+</script>
+
+</body>
+</html>
